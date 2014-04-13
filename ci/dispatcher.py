@@ -103,7 +103,7 @@ class DispatcherHandler(SocketServer.BaseRequestHandler):
             print "register"
             address = command_groups.group(2)
             host, port = re.findall(r":(\w*)", address)
-            runner = {"host": host, "port":port}
+            runner = {"host": host, "port": port}
             self.server.runners.append(runner)
             self.request.sendall("OK")
         elif command == "results":
