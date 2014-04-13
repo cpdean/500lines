@@ -120,7 +120,6 @@ class DispatcherHandler(SocketServer.BaseRequestHandler):
         else:
             self.request.sendall("Invalid command")
 
-
     def dispatch_tests(self, commit_hash):
         # NOTE: usually we don't run this forever
         while True:
